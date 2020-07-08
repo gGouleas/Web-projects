@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example 8 </title>
+  <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<style>
+#test1{
+width:300px;
+height:300px;
+border-style: solid;
+border-color: red blue green yellow ;
+background:  url("photos/tumblr_mr2836JqOU1sy3b1jo1_500.gif"); }
+}
+body{background-color:#66C2FF;}
+img{width:80%;}
+
+
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 1px 1px 3px #1b27b3;
+  -webkit-box-shadow: 0px 1px 3px #415e5a;
+  -moz-box-shadow: 0px 1px 3px #415e5a;
+  box-shadow: 0px 1px 3px #415e5a;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+	</style>
+	
+	<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("#image1").hide(3000);
+    });
+    $("#show").click(function(){
+        $("#image1").show(3000);
+    });
+});
+</script>
+</head>
+<body>
+<div id="test1">
+<h3>hover mouse on sea waves</h3>
+<p class="change" style="color:blue">the text will change with hover on div test1</p>
+<img id="image1" src="photos/Animated-gif-dolphin-jumping-out-of-image-moving-picture.gif"  />
+
+	
+</div>
+<button class="btn" id="hide">Hide</button>
+<button class="btn" id="show" >Show</button>
+<br>
+
+<cite>
+<br>
+image with sea is from flipboard.com
+<br>
+image with is from http://www.netanimations.net/Dolphins-sharks-whales-animations.htm
+</cite>
+</body>
+</html>

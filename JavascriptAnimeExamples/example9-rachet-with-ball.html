@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example 9 </title>
+  <meta charset="utf-8">
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		  <style>
+	  div {width:815px;
+	  height:615px;
+	  background-color:yellow;
+	  }
+	  
+	  </style>
+	</head>
+	<body style="background-color:cyan;">
+		<div >
+		<canvas id="canvas1" width="800" height="600"> </canvas>
+		</div>
+		</canvas>
+		<script>
+	// 	////RequestAnimationFrame for the Browsers
+(function() {
+  var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                              window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+  window.requestAnimationFrame = requestAnimationFrame;
+})();
+// canvas creation
+var ele = document.querySelector("#canvas1");
+var ctx = ele.getContext('2d');
+var x = y = 10;
+var xdir=1;
+var ydir=1;;
+
+// addEventListener mousemove
+ele.addEventListener('mousemove', function(event) {
+ctx.clearRect(0, 0, 800,600 );
+	startX = x;
+	mousex = event.clientX;
+	mousey=event.clientY;
+	
+				  
+});
+
+
+function select () {
+	
+	if (x ==800 || x==0 || (x<=mousex+60 && x>=mousex-60)  ){
+	
+	xdir=-1* xdir}
+	
+	if (y ==550 || y==0 || (y<=mousey+60 && y>=mousey-60) ){
+	
+	ydir=-1* ydir}
+	
+		if (xdir==1) {
+		x=x+5;
+		}
+		else
+		{
+		x=x-5;
+		}
+		if (ydir==1) {
+		y=y+10;
+		}
+		else
+		{
+		y=y-10;
+		}
+	requestAnimationFrame(draw);	
+		
+		}
+
+function draw()  {	
+ctx.clearRect(0, 0, 800,600 );
+	// draw ball
+	ctx.beginPath();
+                  var draw=ctx.arc(x,y,50,0,2*Math.PI);  
+                  ctx.strokeStyle="yellow";
+				  ctx.stroke();
+                  ctx.fillStyle="blue";
+                  ctx.fill();   
+				  ctx.strokeStyle="white";
+			      ctx.fillStyle="red";
+	// draw Rachet
+	              ctx.beginPath();
+                  ctx.rect(mousex-10,mousey-75,20,150);  
+                  ctx.strokeStyle="yellow";
+				  ctx.stroke();
+                  ctx.fill();	  
+}
+requestAnimationFrame(draw);
+setInterval(select, 20);
+		</script>	
+		<cite>image source: efdreams.com</cite>
+	</body>
+</html>

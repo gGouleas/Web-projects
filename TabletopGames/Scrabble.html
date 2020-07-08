@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page3</title>
+ <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script> 
+$(document).ready(function(){
+	 $("#button1").click(function(){
+        $("#resizable").before('<img src="images/A.jpg" />');
+    });
+
+    $("#button2").click(function(){
+        $("#resizable").after('<img src="images/M.jpg" />');
+    });
+});
+</script>
+<style>
+.myButton {
+	-moz-box-shadow: 0px 3px 18px 0px #3dc21b;
+	-webkit-box-shadow: 0px 3px 18px 0px #3dc21b;
+	box-shadow: 0px 3px 18px 0px #3dc21b;
+	background-color:#320a7d;
+	-moz-border-radius:42px;
+	-webkit-border-radius:42px;
+	border-radius:42px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+	width: 150px;
+	position:relative;
+	left: 400px;
+}
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+body {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+	border: 1px solid #555;
+}
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+	font-weight: bold;
+    text-decoration: none;
+	text-align: center;
+	border-bottom: 1px solid #555;
+}
+li a:hover{
+    background-color: #00ff00;
+    color: white;
+}
+#resizable { width: 300px; height: 300px; position:relative; left:400px;}
+</style>
+<script>
+$(function() {
+		$( "#resizable" ).resizable({
+		alsoResize: "#image1"
+});
+});
+</script>
+</head>
+<body>
+<ul>
+  <li><a href="Warhammer.html">Warhammer</a></li>
+  <li><a href="Monopoly.html">Monopoly</a></li>
+  <li><a href="Scrabble.html">Scrabble</a></li>
+</ul>
+
+<div style="margin-left:15%;padding:1px 16px;height:1000px;">
+<h1 style="text-align:center;color:red;">Scrabble</h1>
+<p>Scrabble is a word game in which two to four players score points by placing tiles bearing a single letter onto a board divided 
+into a 15×15 grid of squares. The tiles must form words which, in crossword fashion, read left to right in rows or 
+downwards in columns, and be defined in a standard dictionary or lexicon.</p>
+<p>The name is a trademark of Hasbro, Inc. in the United States and Canada; outside the United States and Canada, it is a trademark of Mattel. 
+The game is sold in 121 countries and is available in 29 languages; approximately 150 million sets have been sold worldwide 
+and roughly one-third of American and half of British homes have a Scrabble set.There are around 4,000 Scrabble clubs around the world.</p>
+<div id="resizable" class="ui-widget-content">
+<img id="image1" src="images/Scrabble.jpg"/>
+</div>
+<div>
+<button id="button1" class="myButton">Before</button>
+<button id="button2" class="myButton">After</button>
+</div>
+</div>
+</body>
+</html>

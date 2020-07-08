@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example 5 </title>
+  <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+ $('#test1').on('mousemove', function( event ){
+        $("span").text("X: " + event.pageX + ", Y: " + event.pageY); 
+    });
+});
+</script>
+<style>
+#test1{
+width:350px;
+height:300px;
+border-style: solid;
+border-color: red blue green yellow ;
+background-color:#EBF5FF;
+}
+	</style>
+</head>
+<body>
+<div id="test1">
+<p>The mouse pointer position is at: <span></span></p>
+</div>
+</body>
+</html>

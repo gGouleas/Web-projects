@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example 19 </title>
+  <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#button1").click(function(){
+        $.ajax({url: "text_ex.txt", success: function(result){
+            $("#test1").html(result);
+        }});
+    });
+});
+</script>
+<style>
+.text1{
+       background-color:#2424B2;
+	   color:white;
+	   }
+.myButton {
+	-moz-box-shadow: 0px 3px 18px 0px #3dc21b;
+	-webkit-box-shadow: 0px 3px 18px 0px #3dc21b;
+	box-shadow: 0px 3px 18px 0px #3dc21b;
+	background-color:#320a7d;
+	-moz-border-radius:42px;
+	-webkit-border-radius:42px;
+	border-radius:42px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+</style>
+</head>
+<body class="text1">
+
+<div id="test1" class="text1">
+<p style="color:blue;"></p>
+</div>
+<button id="button1" class="myButton">Content</button>
+</body>
+</html>

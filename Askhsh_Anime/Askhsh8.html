@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Cowboy</title>
+ <meta charset="utf-8">
+ <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	  <style>
+	  body{
+		background: url(Western.png) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+  }
+	  </style>
+</head>
+<body>
+		<div>
+		<canvas id="canvas1" width="1000" height="800"> </canvas>
+		</div>
+		<script>
+	(function() {
+  var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                              window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+  window.requestAnimationFrame = requestAnimationFrame;
+})();
+var c = document.querySelector("#canvas1");
+var ctx = c.getContext('2d');
+var bodyX=250;
+var bodyY=450;
+var width=10;
+var height=100;
+var headX=255;
+var headY=430;
+var eyeX=264;
+var eyeY=425;
+var bhatX=230;
+var bhatY=407;
+var thatX=245;
+var thatY=400;
+var handX=250;
+var handY=470;
+var bulletX=330;
+var bulletY=470;
+var bulletDir=1;
+var text=false;
+function select () {	
+	if(bulletX >= 980){
+		bulletDir=-1;	
+		}
+	if(bulletDir == 1){
+		bulletX = bulletX+15;
+		}
+	else{
+		if(bulletX <= 260){
+			bodyX=210;
+			bodyY=550;
+			width=100;
+			height=10;
+			headX=210;
+			headY=550;
+			eyeX=205;
+			eyeY=540;
+			handX=240;
+			handY=553;
+			bhatY=580;
+			thatY=573;
+			bulletX=240;
+			bulletY=555;
+			text=true;
+ 		}
+		else{
+			bulletX = bulletX-15;
+		}
+		}
+	requestAnimationFrame(draw);
+}
+			  
+function draw(){
+				ctx.clearRect(0, 0, 1000,800 );
+				//body
+				ctx.beginPath();
+					ctx.rect(bodyX,bodyY,width,height);  
+					ctx.strokeStyle="black";
+					ctx.fillStyle="yellow";
+					ctx.stroke();
+					ctx.fill();
+				//head	
+				ctx.beginPath();
+					ctx.arc(headX,headY,20,0,2*Math.PI);
+					ctx.strokeStyle="black";
+					ctx.stroke();
+					ctx.fillStyle="#ffe0bd";
+					ctx.fill();
+				//eye	
+				ctx.beginPath();
+					ctx.arc(eyeX,eyeY,2,0,2*Math.PI);
+					ctx.strokeStyle="black";
+					ctx.stroke();
+					ctx.fillStyle="black";
+					ctx.fill();
+				ctx.beginPath();
+				//baseOfHat
+					ctx.rect(bhatX,bhatY,50,5);  
+					ctx.strokeStyle="black";
+					ctx.fillStyle="brown";
+					ctx.stroke();
+					ctx.fill();
+				//topOfHat	
+				ctx.beginPath();
+					ctx.rect(thatX,thatY,20,10);  
+					ctx.strokeStyle="black";
+					ctx.fillStyle="brown";
+					ctx.stroke();
+					ctx.fill();
+				//hand	
+				ctx.beginPath();
+					ctx.rect(handX,handY,70,5);  
+					ctx.strokeStyle="black";
+					ctx.fillStyle="yellow";
+					ctx.stroke();
+					ctx.fill();
+				//bullet
+				ctx.beginPath();
+					ctx.rect(bulletX,bulletY,5,5);  
+					ctx.strokeStyle="black";
+					ctx.fillStyle="black";
+					ctx.stroke();
+					ctx.fill();
+					if(text==true){
+						ctx.font="15px Calibri";
+						ctx.fillStyle="red";
+						ctx.fillText("That was a mistake!",170,500);
+					}
+}
+requestAnimationFrame(draw);
+setInterval(select, 20);
+</script>
+</body>
+</html>

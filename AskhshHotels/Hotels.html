@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title> 5 Star Hotels </title>
+<script>
+function chooseHotel1(country){
+var request1;
+if (window.XMLHttpRequest){
+	request1 = new XMLHttpRequest();
+	}
+else{
+	request1 = new ActiveXObject("MicrosoftXMLHttp");
+	}
+request1.onreadystatechange = function(){
+if (request1.readyState==4 && request1.status==200){
+	document.getElementById("box1").innerHTML = request1.responseText;
+	}
+	}
+request1.open("GET",country,true)
+request1.send();
+}
+function chooseHotel2(country){
+var request2;
+if (window.XMLHttpRequest){
+	request2 = new XMLHttpRequest();
+	}
+else{
+	request2 = new ActiveXObject("MicrosoftXMLHttp");
+	}
+request2.onreadystatechange = function(){
+if (request2.readyState==4 && request2.status==200){
+	document.getElementById("box2").innerHTML = request2.responseText;
+	}
+	}
+request2.open("GET",country,true)
+request2.send();
+}
+function chooseHotel3(country){
+var request3;
+if (window.XMLHttpRequest){
+	request3 = new XMLHttpRequest();
+	}
+else{
+	request3 = new ActiveXObject("MicrosoftXMLHttp");
+	}
+request3.onreadystatechange = function(){
+if (request3.readyState==4 && request3.status==200){
+	document.getElementById("box3").innerHTML = request3.responseText;
+	}
+	}
+request3.open("GET",country,true)
+request3.send();
+}
+</script>
+<style>
+#box{
+	background-color:#CECEF6;
+	position:absolute;
+	left:20%;
+	width:800px;
+	text-align:center;
+	color:brown;
+	font-family:Impact, Charcoal, sans-serif;
+}
+.infoBox{
+	background-color:#CECEF6;
+	width:300px;
+	color:black;
+	display:inline-block;
+	
+}
+</style>
+</head>
+
+<body style="background-image:url(hotel.jpeg);background-size:100%;background-repeat:no-repeat;color=white;">
+<div id="box">
+<h1>Welcome to 5 Star Hotels<h1>
+</div>
+<div style="position:relative;top:100px;text-align:center;">
+Select a city to get the respective hotel info<br><br>
+<form>
+<input style="float:left;margin-left:100px" type ="button" value="Athens" onclick="chooseHotel1('HotelsInfo.php?select=1')">
+
+<input type ="button" value="London" onclick="chooseHotel2('HotelsInfo.php?select=2')">
+
+<input style="float:right;margin-right:150px" type ="button" value="Paris" onclick="chooseHotel3('HotelsInfo.php?select=3')">
+</form>
+</div>
+<div style="width:100%;overflow:hidden;position:relative;top:120px;">
+	<div id="box1" class="infoBox"></div>
+
+	<div id="box2" class="infoBox" style="margin-left:200px;"></div>
+
+	<div id="box3" class="infoBox" style="float:right;"></div>
+</div>
+<div style="position:absolute;bottom:20px;right:20px;">
+<footer>Image source:https://www.pexels.com/ </footer>
+</div>
+</html>

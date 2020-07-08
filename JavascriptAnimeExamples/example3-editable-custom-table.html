@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example 3</title>
+  <meta charset="utf-8">
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<style>
+	table, th, td {
+   border: 1px solid black;
+   background-color:#6B8FB2;
+   color:white;
+}
+td {width:40px;
+    height:25px;
+}
+body{background-color:#B8DBFF;}
+
+.btn {
+  background: #1da9b3;
+  background-image: -webkit-linear-gradient(top, #1da9b3, #2980b9);
+  background-image: -moz-linear-gradient(top, #1da9b3, #2980b9);
+  background-image: -ms-linear-gradient(top, #1da9b3, #2980b9);
+  background-image: -o-linear-gradient(top, #1da9b3, #2980b9);
+  background-image: linear-gradient(to bottom, #1da9b3, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 2px 1px 3px #4535b8;
+  -webkit-box-shadow: 0px 3px 3px #361536;
+  -moz-box-shadow: 0px 3px 3px #361536;
+  box-shadow: 0px 3px 3px #361536;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #13d129;
+  background-image: -webkit-linear-gradient(top, #13d129, #3498db);
+  background-image: -moz-linear-gradient(top, #13d129, #3498db);
+  background-image: -ms-linear-gradient(top, #13d129, #3498db);
+  background-image: -o-linear-gradient(top, #13d129, #3498db);
+  background-image: linear-gradient(to bottom, #13d129, #3498db);
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<script>
+// create function for  editable table
+function CreateFunction1() {
+var r=$("#number1").val();
+var c=$("#number2").val();
+for (i=0;i<r;i++){
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(0);
+	for (j=0;j<c;j++){
+    var cell1 = row.insertCell(j);
+    cell1.innerHTML = "";}
+	}
+	console.log(table);
+}// end of function
+</script>
+<div>
+<form>
+Αριθμός γραμμών <input type="text" id="number1" >
+<br>
+Αριθμός στηλών: <input type="text" id="number2">
+</form>
+<br>
+<table class="table1" id="myTable" contenteditable="true"> 
+</table>
+<br>
+<button onclick="CreateFunction1()" class="btn">table</button>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example 11</title>
+  <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<style>
+.myButton {
+	-moz-box-shadow: 3px 4px 0px 0px #9fb4f2;
+	-webkit-box-shadow: 3px 4px 0px 0px #9fb4f2;
+	box-shadow: 3px 4px 0px 0px #9fb4f2;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2dafd6), color-stop(1, #112238));
+	background:-moz-linear-gradient(top, #2dafd6 5%, #112238 100%);
+	background:-webkit-linear-gradient(top, #2dafd6 5%, #112238 100%);
+	background:-o-linear-gradient(top, #2dafd6 5%, #112238 100%);
+	background:-ms-linear-gradient(top, #2dafd6 5%, #112238 100%);
+	background:linear-gradient(to bottom, #2dafd6 5%, #112238 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2dafd6', endColorstr='#112238',GradientType=0);
+	background-color:#2dafd6;
+	-moz-border-radius:21px;
+	-webkit-border-radius:21px;
+	border-radius:21px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #112238), color-stop(1, #2dafd6));
+	background:-moz-linear-gradient(top, #112238 5%, #2dafd6 100%);
+	background:-webkit-linear-gradient(top, #112238 5%, #2dafd6 100%);
+	background:-o-linear-gradient(top, #112238 5%, #2dafd6 100%);
+	background:-ms-linear-gradient(top, #112238 5%, #2dafd6 100%);
+	background:linear-gradient(to bottom, #112238 5%, #2dafd6 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#112238', endColorstr='#2dafd6',GradientType=0);
+	background-color:#112238;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+</style>
+<script> 
+$(document).ready(function(){
+    $("#right").click(function(){
+        $("#packman").animate({
+            left: '+=20px'
+        });
+    });
+});
+</script> 
+
+<script> 
+$(document).ready(function(){
+    $("#left").click(function(){
+        $("#packman").animate({
+            left: '-=20px'
+        });
+    });
+});
+</script> 
+
+<script> 
+$(document).ready(function(){
+    $("#down").click(function(){
+        $("#packman").animate({
+            top: '+=20px'
+        });
+    });
+});
+</script> 
+
+
+<script> 
+$(document).ready(function(){
+    $("#up").click(function(){
+        $("#packman").animate({
+            top: '-=20px'
+        });
+    });
+});
+</script> 
+<script> 
+$(document).ready(function(){
+    $("#stop").click(function(){
+        $("#packman").stop({
+            
+        });
+    });
+});
+</script> 
+<style>
+.button1{display:block;width:100px;height:100px;border-radius:50px;
+font-size:20px;color:#fff;line-height:100px;text-align:center;background:#000}
+body{background-color:#8A8AE6;
+background:  url("images/pacman-android.jpg");
+}
+</style>
+</head>
+<body>
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+<div id="packman" style="background:#FFFF19;height:40px;width:40px;position:absolute;border-radius:50px;">
+
+</div>
+ <table>
+  <tr>
+    <td></td>
+    <td><button id="up"   class="myButton" style="width:70px" >up</button></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><button id="left" class="myButton" style="width:70px"> left </button></td>
+    <td><button id="stop" class="myButton" style="width:70px">stop</button></td>
+    <td><button id="right" class="myButton" style="width:70px"  >right</button></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><button id="down"  class="myButton" style="width:70px" >down</button></td>
+    <td></td>
+  </tr>
+</table> 
+</body>
+</html>

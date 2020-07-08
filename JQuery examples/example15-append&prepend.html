@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example 15 </title>
+  <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#button1").click(function(){
+        $("#app").append(" Append").css({"background-color": "blue","color": "white"});
+    });
+
+    $("#button2").click(function(){
+        $("#prep").prepend(" Prepend").css({"background-color": "red","color": "white"});
+    });
+});
+</script>
+
+<style>
+.before{color:blue;}
+.after{color:red;}
+
+.app {
+	background-color:#124db3;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+.app:hover {
+	background-color:#476e9e;
+}
+.app:active {
+	position:relative;
+	top:1px;
+}
+
+.prep {
+	background-color:#b31461;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+.prep:hover {
+	background-color:#476e9e;
+}
+.prep:active {
+	position:relative;
+	top:1px;
+}
+</style>
+</head>
+<body>
+<p id="app" class="before">------Initial Text---------</p>
+<br>
+<hr>
+<p id="prep" class="after">-------Initial Text---------</p>
+<button id="button1"class="app">append</button>
+<button id="button2" class="prep">prepend</button>
+</body>
+</html>

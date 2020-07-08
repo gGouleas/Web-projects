@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title> 2η ιστοσελίδα </title>
+	<style>
+	body {
+		margin: 0px;
+		padding: 0px;
+	}
+	</style>
+</head>
+
+<body>
+	<canvas id="myCanvas" width="600" height="500"> </canvas>
+	<script>
+		var canvas= document.getElementById('myCanvas');
+		var context= canvas.getContext('2d');
+		context.beginPath();
+		context.lineWidth = 1;
+		context.arc(200,200,140,0,2*Math.PI,false);
+		context.fillStyle = 'yellow';
+		context.lineWidth = 3;
+		context.fill();
+		context.strokeStyle = 'black';
+		context.stroke();
+		context.closePath();
+		
+		context.beginPath();
+		context.arc(140,170,7,0,2*Math.PI,false);
+		context.fillStyle = 'black'
+		context.fill();
+		
+		context.beginPath();
+		context.arc(260,170,7,0,2*Math.PI,false);
+		context.fillStyle = 'black'
+		context.fill();
+		
+		context.beginPath();
+		context.arc(200,300,60,0,Math.PI,true);
+		context.strokeStyle = 'black';
+		context.stroke();
+		
+		context.beginPath();
+		context.arc(140,200,4,Math.PI/2,3/2*Math.PI,false);
+		context.arc(140,220,4,3*Math.PI/2,Math.PI/2,false);
+		context.fillStyle = 'black';
+		context.fill();
+		context.closePath();
+		
+		context.beginPath();
+		context.arc(260,200,4,3*Math.PI/2,Math.PI/2,false);
+		context.arc(260,220,4,Math.PI/2,3/2*Math.PI,false);
+		context.fillStyle = 'black'
+		context.fill();
+		context.closePath();
+	</script>
+<p style= "font-size:30px"><a href="multimedia.html"> Multimedia!</a><br>
+<a href="shapes.html"> Shapes!</a></p>
+</body>
+</html>

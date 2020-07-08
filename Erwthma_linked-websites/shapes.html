@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title> 3η ιστοσελίδα </title>
+<style>
+	body {
+		margin: 0px;
+		padding: 0px;
+	}
+	</style>
+</head>
+
+<body>
+<canvas id="myCanvas" width="600" height="800"> </canvas>
+	<script>
+		var canvas= document.getElementById('myCanvas');
+		var context= canvas.getContext('2d');
+
+		context.beginPath();
+		context.lineWidth = 1;
+		context.arc(300,200,250,Math.PI,Math.PI/2,true);
+		context.fillStyle = 'yellow';
+		context.lineWidth = 3;
+		context.fill();
+		context.strokeStyle = 'green';
+		context.stroke();
+		context.closePath();
+		
+		context.beginPath();
+		context.strokeStyle = 'purple';
+		context.strokeRect(60,500,200,100,);
+		context.transform(2,0,0,2,30,10);
+		context.closePath();
+	</script>
+<p style= "font-size:30px;position:absolute;left:600px;top:200px"><a href="sad-face.html"> Sad-Face!</a><br>
+<a href="multimedia.html"> Multimedia!</a></p>
+</body>
+</html>

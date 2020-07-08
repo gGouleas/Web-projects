@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example 6 </title>
+  <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#test1").hover(function(){
+        $(".change").text("the text changed").css("background-color", "#9999FF");;
+    });
+});
+</script>
+<style>
+#test1{
+width:300px;
+height:300px;
+border-style: solid;
+border-color: red blue green yellow ;
+background-color:#FF9966;
+}
+body{background-color:#66C2FF;}
+	</style>
+</head>
+
+<body>
+<div id="test1">
+<h3>hover mouse on div #test1</h3>
+<p class="change" style="color:blue">the text will change with hover on div test1</p>
+</div>
+<br>
+<hr>
+<p style="color:red;">The text will not change</p>
+</body>
+</html>

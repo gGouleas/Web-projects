@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title> Calculator </title>
+<style>
+#box{
+height:300px;
+width:250px;
+position:relative;
+border:5px solid black;
+top:80px;
+left:40%;
+} 
+#output{
+position:relative;
+left:35px;
+top:10px;
+}
+#output input{
+height:35px;
+color:black;
+border-color:black;
+}
+#buttons{
+position:relative;
+left:35px;
+top:20px;
+}
+</style>
+</head>
+<body>
+<div id="box">
+<div id="output"><input type="text" size="25" id="in"></div>
+<div id="buttons">
+    <p><input type="button" value="7" onclick='val("7")'>
+	<input type="button" value="8" onclick='val("8")'>
+    <input type="button" value="9" onclick='val("9")'>
+	<input type="button" value="X" onclick='val("*")'>
+	<input type="button" value="Sin" onclick='S()'></p>
+    <p><input type="button" value="4" onclick='val("4")'>
+	<input type="button" value="5" onclick='val("5")'>
+    <input type="button" value="6" onclick='val("6")'>
+	<input type="button" value="-" onclick='val("-")'>
+	<input type="button" value="Cos" onclick='C()'></p>
+    <p><input type="button" value="1" onclick='val("1")'>
+	<input type="button" value="2" onclick='val("2")'>
+    <input type="button" value="3" onclick='val("3")'>
+	<input type="button" value="+" onclick='val("+")'>
+	<input type="button" value="Tan" onclick='T()'></p>
+    <p><input type="button" value="0" onclick='val("0")'>
+    <input type="button"  value="&#124&#124" onclick='A()'>
+	<input type="button"  value="/" onclick='val("/")'>
+	<input type="button" value="^" onclick='val("**")'>
+	<input type="button" style="width:40px" value="=" onclick='equals()'></p>
+	<p><input type="button" style="width:70px" value="&radic;" onclick='R()'>
+	<input type="button"value="." onclick='val(".")'>
+	<input type="button" style="width:75px" value="Delete" onclick='del()'></p>
+</div>
+</div>
+<script>
+function val(v)
+{
+document.getElementById("in").value += v;
+}
+function equals() 
+{ 
+try{
+document.getElementById("in").value = eval(document.getElementById("in").value);
+} 
+catch(equals){
+document.getElementById("in").value = "Error";
+}
+}
+function S(){
+document.getElementById("in").value = Math.sin(document.getElementById("in").value);  
+}
+function C(){
+document.getElementById("in").value = Math.cos(document.getElementById("in").value); 
+}
+function T(){
+document.getElementById("in").value = Math.tan(document.getElementById("in").value);
+}
+function R(){
+document.getElementById("in").value = Math.sqrt(document.getElementById("in").value); 
+}
+function A(){
+document.getElementById("in").value = Math.abs(document.getElementById("in").value);
+}
+function del()
+{
+document.getElementById("in").value = null;
+} 
+</script>
+</body>
+</html>

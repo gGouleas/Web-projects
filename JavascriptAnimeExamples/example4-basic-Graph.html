@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example 4</title>
+  <meta charset="utf-8">
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<style>
+	table, th, td {
+   border: 1px solid black;
+   background-color:#6B8FB2;
+   color:white;
+}
+td {width:40px;
+    height:25px;
+}
+body{background-color:#B8DBFF;}
+
+.btn {
+  background: #1da9b3;
+  background-image: -webkit-linear-gradient(top, #1da9b3, #2980b9);
+  background-image: -moz-linear-gradient(top, #1da9b3, #2980b9);
+  background-image: -ms-linear-gradient(top, #1da9b3, #2980b9);
+  background-image: -o-linear-gradient(top, #1da9b3, #2980b9);
+  background-image: linear-gradient(to bottom, #1da9b3, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 2px 1px 3px #4535b8;
+  -webkit-box-shadow: 0px 3px 3px #361536;
+  -moz-box-shadow: 0px 3px 3px #361536;
+  box-shadow: 0px 3px 3px #361536;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #13d129;
+  background-image: -webkit-linear-gradient(top, #13d129, #3498db);
+  background-image: -moz-linear-gradient(top, #13d129, #3498db);
+  background-image: -ms-linear-gradient(top, #13d129, #3498db);
+  background-image: -o-linear-gradient(top, #13d129, #3498db);
+  background-image: linear-gradient(to bottom, #13d129, #3498db);
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+<canvas id="canvas1" width="600" height="600"> </canvas>
+</script>		
+<script>
+// create function for parsing and drawing
+function CreateFunction2() {
+   var data = {};
+   var table = $('table');
+   	data.datavalues = [];
+	table.find(' tr').each(function(i){
+	data.datavalues[i] = [];
+	$(this).find('td').each(function(){
+	var tdvalue = parseFloat( $(this).text() );
+	data.datavalues[i].push( tdvalue );
+		});
+	});
+console.log(data.datavalues);
+//canvas creation
+var c = document.getElementById("canvas1");
+var ctx = c.getContext("2d");
+
+//grid system
+ctx.fillRect(0,0,600,600);
+for (var  i= 0; i <= 600; i += 50) {
+  ctx.moveTo(i, 0);
+  ctx.lineTo(i, 600);
+}
+
+for (var  j= 0; j <= 600; j += 50) {
+  ctx.moveTo(0, j);
+  ctx.lineTo(600, j);
+}
+ctx.strokeStyle = "green";
+ctx.stroke();
+//get row and column numbers
+var r=$("#number1").val();
+var c=$("#number2").val();
+var k=50;
+//draw lines
+	ctx.lineWidth=3;
+	 ctx.beginPath();
+	 ctx.moveTo(k, 600-data.datavalues[0] [0]);
+for (i=0;i<c;i++){
+                ctx.lineTo(k, 600-data.datavalues[0] [i]);
+                k=k+50;
+                ctx.strokeStyle = "red";
+                ctx.stroke();
+}	
+// draw points
+var k=50;
+
+for (i=0;i<c;i++){          
+	              ctx.beginPath();
+                  var draw=ctx.arc(k,600-data.datavalues[0] [i],5,0,2*Math.PI);  
+                  ctx.stroke();
+                  ctx.fillStyle="yellow";
+                  ctx.fill(); 
+                  ctx.closePath();
+	              k=k+50;
+   	              console.log(k);
+	}
+	
+}// end of function
+</script>
+
+<script>
+// create function for  editable table
+function CreateFunction1() {
+var r=$("#number1").val();
+var c=$("#number2").val();
+for (i=0;i<r;i++){
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(0);
+	for (j=0;j<c;j++){
+    var cell1 = row.insertCell(j);
+    cell1.innerHTML = "";}
+	}
+	console.log(table);
+}// end of function
+</script>
+<div>
+<form>
+Αριθμός γραμμών <input type="text" id="number1" >
+<br>
+Αριθμός στηλών: <input type="text" id="number2">
+</form>
+<br>
+<table class="table1" id="myTable" contenteditable="true"> 
+</table>
+<br>
+<button onclick="CreateFunction1()" class="btn">table</button>
+<button onclick="CreateFunction2()" class="btn">parse</button>
+</body>
+</html>

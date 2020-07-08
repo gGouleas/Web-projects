@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page1</title>
+ <meta charset="utf-8">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#button1").click(function(){
+        $.ajax({url: "WarhammerInfo.txt", success: function(result){
+            $("#content2").html(result);
+        }});
+    });
+	$("#press").click(function(){
+        $("#image1").slideToggle("");
+    });
+	$(function () {
+    var $element = $('#logo');
+    function fadeInOut () {
+        $element.fadeIn(1000, function () {
+            $element.fadeOut(1500, function () {
+                $element.fadeIn(1500, function () {
+                    setTimeout(fadeInOut, 500);
+                });
+            });
+        });
+    }
+    fadeInOut();
+});
+});
+</script>
+<style>
+ #press{background-color:#1A3380;
+	width:300px;  
+	height:30px;
+	text-align: center;
+	color:white;
+	}
+ #image1 {
+     background-color:#1A3380;
+	width:300px;
+	height:300px;
+}
+
+ #image1 {
+   
+    display: none;
+}
+.myButton {
+	-moz-box-shadow: 0px 3px 18px 0px #3dc21b;
+	-webkit-box-shadow: 0px 3px 18px 0px #3dc21b;
+	box-shadow: 0px 3px 18px 0px #3dc21b;
+	background-color:#320a7d;
+	-moz-border-radius:42px;
+	-webkit-border-radius:42px;
+	border-radius:42px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+body {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+	border: 1px solid #555;
+}
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+	font-weight: bold;
+    text-decoration: none;
+	text-align: center;
+	border-bottom: 1px solid #555;
+}
+li a:hover{
+    background-color: #00ff00;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="Warhammer.html">Warhammer</a></li>
+  <li><a href="Monopoly.html">Monopoly</a></li>
+  <li><a href="Scrabble.html">Scrabble</a></li>
+</ul>
+
+<div style="margin-left:15%;padding:1px 16px;height:1000px;">
+<div id="logo" style="margin:auto;width:50%;">
+<img id="image" src="images/WarhammerLogo.jpg"  />
+</div>
+<h1 style="text-align:center;color:red;">Warhammer</h1>
+<div id="content1">
+<p>Warhammer 40,000 is a table-top miniature-based war game set in a dystopian future. Although usually played by two players, theoretically any number of players can participate at once.</p>
+
+<p>Players can choose one of a number of factions from within the Warhammer 40,000 universe - examples include, humanity's defenders, the Space Marines and Imperial Guard, the nearly extinct race of Elder,
+ the all-consuming Tyranids or the corrupted once-human forces of Chaos. Each race also how their own sub-groups and flavours 
+- for example there are Chapters of Space Marines with their own specialisations, whilst a Chaos army that worships the war-god Khorne would look very different to one worshiping the pleasure god Slaanesh.</p>
+
+<p>Players select their armies based on the miniatures they own. To ensure balance each miniature is assigned a points value (with the value rising for optional upgrades) and players usually agree a points 
+limit for each army before play. Similarly, players will agree the rules and victory conditions for a specific scenario.</p>
+</div >
+<div id="content2">
+<button id="button1" class="myButton">Show Rules</button>
+</div>
+<div style="float:right">
+<div id="press">Click here to see the games</div>
+<img id="image1" src="images/Warhammer.jpg" />
+</div>
+<div>
+</div>
+ </div>
+
+</body>
+</html>

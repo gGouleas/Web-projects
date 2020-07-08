@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page2</title>
+ <meta charset="utf-8">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $(function(){
+	var $element = $('#image1');
+		function moveRight (){
+		for(i=0;i<10;i++){
+        $element.animate({
+            left: '+=100px'
+        });
+		}
+    }
+	moveRight();
+});
+    $("#hover").hover(function(){
+        $(".change").text("Hasbro is an American multinational toy and board game company. It is the third largest toy maker in the world!").css("background-color", "#9999FF");
+    });
+});
+</script>
+<style>
+body {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+	border: 1px solid #555;
+}
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+	font-weight: bold;
+    text-decoration: none;
+	text-align: center;
+	border-bottom: 1px solid #555;
+}
+li a:hover{
+    background-color: #00ff00;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="Warhammer.html">Warhammer</a></li>
+  <li><a href="Monopoly.html">Monopoly</a></li>
+  <li><a href="Scrabble.html">Scrabble</a></li>
+</ul>
+
+<div style="margin-left:15%;padding:1px 16px;height:1000px;">
+<div >
+<img id="image1" src="images/Monopoly.jpg" style="height:100px;width:100px;position:absolute;"/>
+</div>
+<div style="position:relative;top:100px;">
+<p>Monopoly is a board game where players roll two six-sided dice to move around the game-board buying and trading properties,
+and develop them with houses and hotels. Players collect rent from their opponents, 
+with the goal being to drive them into bankruptcy. Money can also be gained or lost through Chance and Community Chest cards, 
+and tax squares; players can end up in jail, which they cannot move from until they have met one of several conditions. 
+The game has numerous house rules and hundreds of different editions exist, in addition to many spin-offs and related media; 
+Monopoly has become a part of international popular culture, having been locally licensed in more than 103 countries and printed in more than thirty-seven languages.</p>
+<p>Monopoly is derived from The Landlord's Game, which was created by Elizabeth Magie in the United States in 1903 as 
+a way to demonstrate that an economy which rewards wealth creation is better than one in which monopolists work under few constraints
+ and to promote the economic theories of Henry George and in particular his ideas about taxation. 
+ It was first published by Parker Brothers in 1935. The game is named after the economic concept of monopoly—the domination of a market by a single entity. 
+ It is owned and produced by the American game and toy company: 
+ <div id=hover class="change" style="float:left;"><b>Hasbro<b></div>
+</div> 
+</div>
+</body>
+</html>

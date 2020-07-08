@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example 9 </title>
+  <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<style>
+#test1{
+width:300px;
+height:300px;
+border-style: solid;
+border-color: red blue green yellow ;
+background:  url("photos/1377240.jpg"); }
+}
+body{background-color:#66C2FF;
+}
+url{width:300px;
+height:300px;}
+img{width:80px;
+height:100px;
+}
+
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 1px 1px 3px #1b27b3;
+  -webkit-box-shadow: 0px 1px 3px #415e5a;
+  -moz-box-shadow: 0px 1px 3px #415e5a;
+  box-shadow: 0px 1px 3px #415e5a;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+	</style>
+	
+	<script>
+$(document).ready(function(){
+    $("#fadein").click(function(){
+        $("#image1").fadeIn(3000).css("visibility", "visible");
+		
+    });
+    $("#fadeout").click(function(){
+        $("#image1").fadeOut(3000).css("visibility", "visible");
+    });
+});
+</script>
+</head>
+<body>
+<div id="test1">
+<h3>press the buttons for fadeIn or fadeOut</h3>
+<img id="image1" src="photos/penguins.jpg" style="visibility: hidden;"  />	
+</div>
+<button class="btn" id="fadein">fadeIn</button>
+<button class="btn" id="fadeout" >FadeOut</button>
+<br>
+
+<cite>
+<br>
+image with sea is from flipboard.com
+<br>
+www.scientificamerican.com
+www.eversparkinteractive.com
+image with is from http://www.netanimations.net/Dolphins-sharks-whales-animations.htm
+</cite>
+</body>
+</html>

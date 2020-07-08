@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title> Color Change </title>
+<style>
+#Text{
+	font:30px Arial;
+	}
+#button{
+	font:15px Arial;
+	position:relative;
+	left:150px;
+	}
+
+</style>
+<script>
+function RedBlue(){
+	var x = document.getElementById("Text");
+	if(x.style.color == "blue"){
+		x.style.color = 'red';
+		}
+else{
+		x.style.color = 'blue';
+		}
+}
+</script>
+</head>
+
+<body onload="start=setInterval(function(){RedBlue()},1000);">
+<p id="Text">THIS TEXT CHANGES COLORS!</p>
+<button id="button" onclick = "clearInterval(start);">Stop the color</button>
+</body>
+</html>

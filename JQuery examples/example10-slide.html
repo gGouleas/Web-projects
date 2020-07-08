@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example 10 </title>
+  <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<style>
+ #press{background-color:#1A3380;
+	width:300px;  
+	height:30px;
+	text-align: center;
+	color:white;
+	}
+ #image2 {
+     background-color:#1A3380;
+	width:300px;
+	height:300px;
+}
+
+ #image2 {
+   
+    display: none;
+}
+</style>
+
+
+<script> 
+$(document).ready(function(){
+    $("#press").click(function(){
+        $("#image2").slideToggle("");
+    });
+});
+</script>
+</head>
+<body>
+<div id="press">Click here to slideToggle the image</div>
+<img id="image2" src="photos/sea.jpg" />
+</body>
+</html>

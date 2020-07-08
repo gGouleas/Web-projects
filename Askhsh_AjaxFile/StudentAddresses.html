@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title> Student addresses </title>
+<script>
+function loadxmlFile(){
+var request;
+if (window.XMLHttpRequest){
+	request = new XMLHttpRequest();
+	}
+else{
+	request = new ActiveXObject("MicrosoftXMLHttp");
+	}
+request.onreadystatechange = function(){
+if (request.readyState==4 && request.status==200){
+	file = request.responseXML;
+	txt = "";
+	x = file.getElementsByTagName("address");
+	for (i=0;i<x.length;i++){
+		txt = txt + x[i].childNodes[0].nodeValue + "<br>";
+	}
+	document.getElementById("div1").innerHTML = txt;
+}
+}
+request.open("GET","Students.xml",true);
+request.send();
+}
+</script>
+</head>
+<body>
+<h1>Διευθύνσεις Φοιτητών</h1>
+<div id="div1"></div>
+<script>
+loadxmlFile();
+</script>
+</body>
+</html>

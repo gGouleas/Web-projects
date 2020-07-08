@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example 7 </title>
+  <meta charset="utf-8">
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+	  <style>
+	  div {width:815px;
+	  height:615px;
+	  background-color:yellow;
+	  background-image: url("aquarium-07.jpg")
+	  }
+	  
+	  </style>
+	</head>
+	<body style="background-color:cyan;">
+		<div >
+		<canvas id="canvas1" width="800" height="600"> </canvas>
+		</div>
+		</canvas>
+		<script>
+	// Pollyfill for RequestAnimationFrame
+(function() {
+  var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                              window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+  window.requestAnimationFrame = requestAnimationFrame;
+})();
+
+var ele = document.querySelector("#canvas1");
+var ctx = ele.getContext('2d');
+// x,y are the coordinates for blue ball
+var x =150;
+ var y = 450;
+var xdir=1;
+var ydir=1;;
+// a,b are the coordinates for red ball
+var  a=730;
+var b=540;
+
+var adir=-1;
+var bdir=-1;
+
+function select () {
+
+	
+	if (x ==800 || x==0){
+	
+	xdir=-1* xdir}
+	
+	if (y ==550 || y==0){
+	
+	ydir=-1* ydir}
+	
+		if (xdir==1) {
+		x=x+5;
+		}
+		else
+		{
+		x=x-5;
+		}
+		if (ydir==1) {
+		y=y+10;
+		}
+		else
+		{
+		y=y-10;
+		}
+		
+	if (a ==800 || a==0){
+	
+	adir=-1* adir}
+	
+	if (b ==550 || b==0){
+	
+	bdir=-1* bdir}
+	// distance between the centers of circles
+	var dist = Math.sqrt( Math.pow((a-x), 2) + Math.pow((b-y), 2) ); 
+	// if distance is nearly 100 then ==> collision
+	if (dist<=110 && dist>=90)  {
+	
+	xdir=-1* xdir ;
+	adir=-1* adir;
+	
+	
+	ydir=-1* ydir ;
+	bdir=-1* bdir;
+	
+	
+	}
+	
+		if (adir==1) {
+		a=a+5;
+		}
+		else
+		{
+		a=a-5;
+		}
+		if (bdir==1) {
+		b=b+10;
+		}
+		else
+		{
+		b=b-10;
+		}
+	
+	requestAnimationFrame(draw);	
+		
+		}
+
+function draw()  {	
+ctx.clearRect(0, 0, 800,600 );
+
+// draw blue ball
+	ctx.beginPath();
+                  var draw=ctx.arc(x,y,50,0,2*Math.PI);  
+                  ctx.strokeStyle="yellow";
+				  ctx.stroke();
+                  ctx.fillStyle="blue";
+                  ctx.fill(); 
+// draw red ball
+		ctx.beginPath();
+                  var draw=ctx.arc(a,b,50,0,2*Math.PI);  
+                  ctx.strokeStyle="green";
+				  ctx.stroke();
+                  ctx.fillStyle="red";
+                  ctx.fill(); 		  				  
+}
+requestAnimationFrame(draw);
+setInterval(select, 20);	
+		</script>	
+		<cite>image source: efdreams.com</cite>
+	</body>
+</html>

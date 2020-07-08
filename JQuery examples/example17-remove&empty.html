@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example 17 </title>
+  <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+    $("#button1").click(function(){
+        $("#test1").remove();
+    });
+
+    $("#button2").click(function(){
+        $("#test1").empty();
+    });
+});
+</script>
+ <style>
+.mouse{
+font-size: 18px;
+border: 5px solid #7A7ACC;
+border-radius: 100px;
+width: 100px;
+height: 100px;
+ background-image: url(images/mm8.gif);
+}
+.mouse:hover {
+	background-color:#005C00;}
+	
+.monkey{font-size: 18px;
+border: 5px solid #7A7ACC;
+border-radius: 100px;
+width: 100px;
+height: 100px;
+ background-image: url(images/a119.gif);
+}
+.monkey:hover {
+	background-color:#E6005C;}
+body{background-color:#5C5CE6;}
+</style>
+</head>
+<body>
+  <div   id="test1" style="width:100%; height:300px; background-image: url(images/animal-cartoon-22984799.jpg);">
+  <h1 style="display:block;color:white;" id="test" class="before" >before and after methods</h1>
+<img src="images/mm8.gif" />
+<img src="images/a119.gif" />
+<br>
+<hr>
+</div>
+<hr>
+<br>
+<button id="button1" class="mouse"  style="color:blue;" >remove</button>
+<button id="button2" class="monkey"  style="color:blue;">empty</button>
+<br>
+<cite>
+image joungle:Dreamstime.com 
+image mouse and monkey:http://www.heathersanimations.com/jungle.html
+</body>
+</html>

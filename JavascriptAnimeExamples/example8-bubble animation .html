@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example 8 </title>
+  <meta charset="utf-8">
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	
+	  <style>
+	  div {width:815px;
+	  height:615px;
+	  background-color:yellow;
+	  background-image: url("aquarium-07.jpg")
+	  }
+	  
+	  </style>
+	</head>
+	<body style="background-color:cyan;">
+		<div >
+		<canvas id="canvas1" width="800" height="600"> </canvas>
+		</div>
+		</canvas>
+		<script>
+	////RequestAnimationFrame for the Browsers
+(function() {
+  var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                              window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+  window.requestAnimationFrame = requestAnimationFrame;
+})();
+// canvas creation
+var c = document.querySelector("#canvas1");
+var ctx = c.getContext('2d');
+var x =50;
+var y = 50;
+var mousex=0;
+var mousey=0;
+// select directions
+function select () {	
+	requestAnimationFrame(draw);
+		}
+// addEventListener mousemove
+c.addEventListener('mousemove', function(event) {
+	mousex = event.clientX;
+	mousey=event.clientY;			  
+});
+
+function draw()  {	
+              ctx.clearRect(0, 0, 800,600 );
+			  ctx.fillStyle="rgba(255, 255, 255, .4)";
+	          ctx.beginPath();
+              var draw=ctx.arc(mousex,mousey,100,0,2*Math.PI);  
+              ctx.strokeStyle="yellow";
+			  ctx.stroke();            
+              ctx.fill(); 			  
+}
+
+
+setInterval(select, 20);
+	
+		</script>	
+		<cite>image source: efdreams.com</cite>
+	</body>
+</html>

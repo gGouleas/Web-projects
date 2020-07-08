@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title> Catalog </title>
+<script>
+function Student(name,surname,address,eMail,number,gradeA,gradeB){
+	this.name = name;
+	this.surname = surname;
+	this.address = address;
+	this.eMail = eMail;
+	this.number	= number;
+	this.gradeA = gradeA;
+	this.gradeB = gradeB;
+	this.ShowStudent = ShowStudent;
+}
+function ShowStudent(){
+	document.write("Name: "+this.name+"<br>");
+	document.write("surname: "+this.surname+"<br>");
+	document.write("address: "+this.address+"<br>");
+	document.write("eMail: "+this.eMail+"<br>");
+	document.write("number: "+this.number+"<br>");
+	document.write("gradeA: "+this.gradeA+"<br>");
+	document.write("gradeB: "+this.gradeB+"<hr>");
+}
+</script>
+</head>
+
+<body>
+<script>
+stud1=new Student("Δημήτρης","Παππατρέχας","Ηρακλειου 145","Dim@gmail.com","2102346765","16/20","15/20");
+stud1.ShowStudent();
+stud2=new Student("Πέτρος","Ράλλης","Πέτρου Ράλλη 343","Petros@gmail.com","2103490061","19/20","20/20");
+stud2.ShowStudent();
+stud3=new Student("Νίκος","Βεργής","Δεκελείας 90","NVergis@gmail.com","2109870345","11/20","9/20");
+stud3.ShowStudent();
+stud4=new Student("Κωσταντίνος","Κωσταντίνου","Αλεξάνδρας 794","KwstKwst@gmail.com","2106719252","7/20","17/20");
+stud4.ShowStudent();
+</script>
+</body>
+</html>

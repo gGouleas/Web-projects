@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<student>
+	<name>Konstantinos</name>
+	<surname>Mixas</surname>
+	<address>Kountouriotou 32</address>
+	<email>konstM@gmail.com</email>
+	<phone>6978690314</phone>
+	</student>
+	
+	<student>
+	<name>Petros</name>
+	<surname>Papatrexas</surname>
+	<address>Vouliagmenhs 431</address>
+	<email>papa@gmail.com</email>
+	<phone>6986754003</phone>
+	</student>
+	
+	<student>
+	<name>Eirini</name>
+	<surname>Antoniou</surname>
+	<address>Dios 67</address>
+	<email>anton@hotmail.com</email>
+	<phone>6946943731</phone>
+	</student>
+	
+	<student>
+	<name>Mixail</name>
+	<surname>Kontesis</surname>
+	<address>Peukon 90</address>
+	<email>mkont@gmail.com</email>
+	<phone>6076845313</phone>
+	</student>
+	
+	<student>
+	<name>Dimosthenis</name>
+	<surname>Mpanikas</surname>
+	<address>Anatolis 21</address>
+	<email>dimosMpan@</email>
+	<phone></phone>
+	</student>
+	
+	<student>
+	<name>Euaggelos</name>
+	<surname>Kotrotsos</surname>
+	<address>Kolokotroni 176</address>
+	<email>vkotrotsos@yahoo.com</email>
+	<phone>6939075632</phone>
+	</student>
+	
+	<student>
+	<name>Xaralampos</name>
+	<surname>Anastasiadis</surname>
+	<address>Polutexniou 2</address>
+	<email>anast@gmail.com</email>
+	<phone>6981234567</phone>
+	</student>
+	
+	<student>
+	<name>Dimitris</name>
+	<surname>Karathanos</surname>
+	<address>Peiraios 675</address>
+	<email>dimkara@gmail.com</email>
+	<phone>6970233555</phone>
+	</student>
+	
+	<student>
+	<name>Maria</name>
+	<surname>Kuriakou</surname>
+	<address>Hrakleiou 198</address>
+	<email>markur@yahoo.com</email>
+	<phone>6985466901</phone>
+	</student>
+	
+	<student>
+	<name>Eleni</name>
+	<surname>Ioannou</surname>
+	<address>Kifisias 708</address>
+	<email>elIoann@gmail.com</email>
+	<phone>6946730755</phone>
+	</student>
+</data>

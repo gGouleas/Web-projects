@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title> Home Page </title>
+<style>
+	body {
+	font: 24px Helvetica;
+	background: black;
+	}
+	
+	#main{
+	min-height: 800px;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	flex-flow: row;
+	}
+	
+	#main > article{
+	margin > 4px;
+	padding > 5px;
+	border: 1px solid black;
+	border-radius: 7pt;
+	background: white;
+	flex: 3 1 60%;
+	order: 2;
+	}
+
+	#main > nav {
+	margin: 4px;
+	padding: 5px;
+	border: 1px solid black;
+	border-radius: 7pt;
+	background: yellow;
+	flex: 1 6 20%;
+	order:1;
+	}
+	
+	#main > aside{
+	margin: 4px;
+	padding: 5px;
+	border: 1px solid black;
+	border_radius: 7pt;
+	background: yellow;
+	flex: 1 6 20%;
+	order:3;
+	}
+	
+	header,footer{
+	display: block;
+	margin: 4px:
+	padding: 5px:
+	min-height: 100px;
+	border: 1px solid black:
+	border-radius: 7pt;
+	background: yellow;
+	}
+	
+	.header1{
+	width: auto;
+	padding: 20px;
+	overflow: hidden;
+	}
+	
+	.header1 > img{
+	max-width:100px;
+	margin-right: 15px;
+	float: left;
+	}
+	
+	img{
+	max-width: 100%;
+	height: auto;
+	width: auto;
+	}
+	
+	#div1{
+	width; 300px;
+	height: 200px;
+	position: relative;
+	animation-name: animation;
+	animation-duration: 3s;
+	}
+	
+	@keyframes animation{
+	0% {left:0px; bottom:0px;}
+	25% {left:0px; bottom:25px;}
+	50% {left:0px; bottom: 60px;}
+	75% {left:0px; bottom: 100px}
+	100% {left:0px; bottom: 160px}
+	}
+	
+	#nav li { 
+    margin: 2px; 
+    display: inline; 
+	}
+	
+	#nav a { 
+    display: block; 
+    padding: 1em 15px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    color: yellow;
+	font: 20px arial, sans-serif; 
+	} 
+	
+	#nav a:link{ 
+    background-color:  black; 
+			margin-right: 20px;
+	}
+	
+	#nav a:visited { 
+    background-color:  black; 
+	}
+	
+	#nav a:hover{ 
+    background-color: red; 
+	} 
+	#nav a:active { 
+    background-color: blue; 
+	} 
+	
+	@media all and (max-width: 650px){
+	#main,#page{
+	flex-flow: column;
+	flex-direction: column;
+	}
+	
+	#main > article,#main > nav,#main > aside{
+	order: 0;
+	}
+	
+	#main > nav,#main > aside,header,footer{
+	min-height:50px;
+	max-height: 50px;
+	}
+	
+</style>
+</head>
+<body>
+<header><div class="header1"><img src="images/ball.jpg" alt="error">
+<h1>Ολα τα νέα για την ΑΕΚ!</h1>
+</div>
+</header>
+<div id="main">
+<article>
+<img src="images/Paniguri.jpg" alt="error">
+<p>«Η ΑΕΚ πέρασε πολλά, γνώρισε τον υποβιβασμό λόγω οικονομικών προβλημάτων, αλλά πάλεψε 
+και κατάφερε να επιστρέψει. Το πρώτο ματς στο Μιλάνο κόντρα στους «γίγαντες» της Μίλαν απέδειξε περίτρανα 
+ότι η ΑΕΚ βρίσκεται και πάλι στην ευρωπαϊκή ελίτ, όπως στο ένδοξο παρελθόν της» αναφέρεται στο video της UEFA.</p> 
+<p>Στην κάμερα της ευρωπαϊκής ποδοσφαιρικής ομοσπονδίας μίλησαν ο αρχηγός της ΑΕΚ, Πέτρος Μάνταλος, ο
+Λάζαρος Χριστοδουλόπουλος και ο επώνυμος φίλαθλος της Ένωσης, Αλέξανδρος Μαργαρίτης. «Υποστηρίζω 
+την ΑΕΚ από τότε που έχω συνείδηση του εαυτού μου.<br> Είναι η ομάδα που ιδρύθηκε από τους πρόσφυγες 
+που έφυγαν από την Κωνσταντινούπολη και τη Μικρά Ασία το 1922 και αποτελεί μικρογραφία της συνολικής
+ιστορίας της Ελλάδας. Όλοι οι πρόσφυγες είναι καλοδεχούμενοι στις τάξεις της ομάδας μας και υπάρχει και
+ένα πανό που αναφέρει ότι η ΑΕΚ είναι η μητέρα όλων των προσφύγων» αναφέρει με υπερηφάνεια στο video
+της UEFA ο Αλέξανδρος Μαργαρίτης. 
+
+<p>Δείτε το αφιέρωμα της UEFA  <a href="https://uefa.app.box.com/s/e05izrslqeq66bfc3skb84v7e5mf9gk5"><strong>εδώ</strong>.</a></p>
+</article>
+<nav><div id="nav"> 
+     <ul id="nav"> 
+		            
+<li><a href="https://www.aekfc.gr">AEK Official</a></li>  
+            
+<li><a href="http://www.aek365.com/">News</a></li> 
+            
+<li><a href="https://en.wikipedia.org/wiki/AEK_Athens_F.C.">History</a></li> 
+
+<li><a href="https://www.aekfc.gr/ehp/e-shop-45908.htm?lang=el&path=-222580127">e-shop</a></li> 
+        </ul> 
+</div> </nav>
+<aside><div id="div1"><img src="images/AEK.jpg" width="300" height="200" alt="error"></div>
+<h2>Στο πολυκατάστημα της ΑΕΚ στην Νεα Φιλαδέλφια θα βρείτε τα πάντα σχετικά με την αγαπημένη μας ομάδα<h2>
+<div><img src="images/AEK2.jpg" width="300" height="200" alt="error"></div>
+</aside>
+</div>
+<footer>&copyGouleas Ioannis</footer>
+</body>
+</html>
